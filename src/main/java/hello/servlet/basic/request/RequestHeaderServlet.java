@@ -62,13 +62,13 @@ public class RequestHeaderServlet extends HttpServlet {
 
         System.out.println();
 
-        System.out.println("[Accept-Language 편의 조회");
+        System.out.println("[Accept-Language 편의 조회]");
         request.getLocales().asIterator()
                 .forEachRemaining(locale -> System.out.println("locale = " + locale));
         System.out.println("request.getLocale() = " + request.getLocale());
         System.out.println();
 
-        System.out.println("[cookie 편의 조회");
+        System.out.println("[cookie 편의 조회]");
         if (request.getCookies() != null) {
             for (Cookie cookie : request.getCookies()) {
                 System.out.println(cookie.getValue() + ": " + cookie.getValue());
@@ -77,7 +77,7 @@ public class RequestHeaderServlet extends HttpServlet {
 
         System.out.println();
 
-        System.out.println("[Content 편의 조회");
+        System.out.println("[Content 편의 조회]");
         System.out.println("request.getContentType() = " + request.getContentType());
         System.out.println("request.getContentLength() = " + request.getContentLength());
         System.out.println("request.getCharacterEncoding() = " + request.getCharacterEncoding());
